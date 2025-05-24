@@ -1,187 +1,199 @@
-# variable 
-  A **variable** is like a **Container** where you can **store data** — numbers, text, etc.
-  **In Go, you must declare a variable **before** you use it.**
+# variable
 
-  ## Declaring a Variable
-   ***In Go language variables are created in two different ways:**
-   1. **Using var keyword**: In Go language, variables are created using `var` keyword of a particular type, connected with name and provide its initial value. Syntax:
-   ```go
-   var variable_name type = expression
-   ```
-   ```go
-   package main
+A **variable** is like a **Container** where you can **store data** — numbers, text, etc.
+**In Go, you must declare a variable **before** you use it.**
 
-   import "fmt"
+## Declaring a Variable
 
-   var name ="John Doe"; //? Variable One
-   
-   func main() {
-	var fruit = "Apple" //? Varibale Two
+### \*In Go language variables are created in two different ways:
+
+1. **Using var keyword**: In Go language, variables are created using `var` keyword of a particular type, connected with name and provide its initial value. Syntax:
+
+```go
+var variable_name type = expression
+```
+
+```go
+package main
+
+import "fmt"
+
+var name ="John Doe"; //? Variable Onea
+
+func main() {
+    var fruit = "Apple" //? Varibale Two
 	fmt.Println(name);
 	fmt.Println(fruit);
-   }
-   ```
-   ```bash
-   //output
-   John Doe
-   Apple
-   ```
+}
+```
 
-    **Important Points**:
+```bash
+//output
+John Doe
+Apple
 
-    - In the above syntax, either type or = expression can be omitted, but not both.
-    - If the = expression is omitted, then the variable value is determined by its type's default value. The default value is usually 0.
-    - If the type is removed, then the type of the variable is determined by the value-initialize in the expression. Example:
-  
-    ```go
-    // Go program to illustrate 
-    // concept of variable
-    package main
+```
 
-    import "fmt"
+### **Important Points**:
 
-    func main() {
+- In the above syntax, either type or = expression can be omitted, but not both.
+- If the = expression is omitted, then the variable value is determined by its type's default value. The default value is usually 0.
+- If the type is removed, then the type of the variable is determined by the value-initialize in the expression. Example:
 
-    // Variable declared and 
-    // initialized without the 
-    // explicit type
-    var myvariable1 = 20
-    var myvariable2 = "GeeksforGeeks"
-    var myvariable3 = 34.80
+```go
+// Go program to illustrate
+// concept of variable
+package main
 
-    // Display the value and the
-    // type of the variables
-    fmt.Printf("The value of myvariable1 is : %d\n",
-                                  myvariable1)                        
-    fmt.Printf("The type of myvariable1 is : %T\n",
+import "fmt"
+
+func main() {
+
+// Variable declared and
+// initialized without the
+// explicit type
+var myvariable1 = 20
+var myvariable2 = "GeeksforGeeks"
+var myvariable3 = 34.80
+
+// Display the value and the
+// type of the variables
+fmt.Printf("The value of myvariable1 is : %d\n",
                                   myvariable1)
-    fmt.Printf("The value of myvariable2 is : %s\n",
+fmt.Printf("The type of myvariable1 is : %T\n",
+                                  myvariable1)
+fmt.Printf("The value of myvariable2 is : %s\n",
                                       myvariable2)
-    fmt.Printf("The type of myvariable2 is : %T\n",
+fmt.Printf("The type of myvariable2 is : %T\n",
                                   myvariable2)
-    fmt.Printf("The value of myvariable3 is : %f\n",
+fmt.Printf("The value of myvariable3 is : %f\n",
                                       myvariable3)
-    fmt.Printf("The type of myvariable3 is : %T\n",
+fmt.Printf("The type of myvariable3 is : %T\n",
                                   myvariable3)
-    }
-    ```
-    ```bash
-    The value of myvariable1 is : 20
-    The type of myvariable1 is : int
-    The value of myvariable2 is : GeeksforGeeks
-    The type of myvariable2 is : string
-    The value of myvariable3 is : 34.800000
-    The type of myvariable3 is : float64
-    ```
-    - If the expression is removed, then the variable holds zero-value for the type like zero for the number, false for Booleans, "" for strings, and nil for interface and reference type. So, there is no such concept of an uninitialized variable in Go language. Example:
-    ```go
-    // Go program to illustrate
-    // concept of variable
-    package main
- 
-    import "fmt"
- 
-    func main() {
+}
+```
+```bash
+The value of myvariable1 is : 20
+The type of myvariable1 is : int
+The value of myvariable2 is : GeeksforGeeks
+The type of myvariable2 is : string
+The value of myvariable3 is : 34.800000
+The type of myvariable3 is : float64
+```
+- If the expression is removed, then the variable holds zero-value for the type like zero for the number, false for Booleans, "" for strings, and nil for interface and reference type. So, there is no such concept of an uninitialized variable in Go language. Example:
+```go
+// Go program to illustrate
+// concept of variable
+package main
 
-    // Variable declared and 
-    // initialized without expression
-    var myvariable1 int
-    var myvariable2 string
-    var myvariable3 float64
+import "fmt"
 
-    // Display the zero-value of the variables
-    fmt.Printf("The value of myvariable1 is : %d\n",
+func main() {
+
+// Variable declared and
+// initialized without expression
+var myvariable1 int
+var myvariable2 string
+var myvariable3 float64
+
+// Display the zero-value of the variables
+fmt.Printf("The value of myvariable1 is : %d\n",
                                      myvariable1)
 
-    fmt.Printf("The value of myvariable2 is : %s\n",
+fmt.Printf("The value of myvariable2 is : %s\n",
                                      myvariable2)
 
-    fmt.Printf("The value of myvariable3 is : %f",
+fmt.Printf("The value of myvariable3 is : %f",
                                      myvariable3)
-    }
-    ```
-    ```bash
-    The value of myvariable1 is : 0
-    The value of myvariable2 is : 
-    The value of myvariable3 is : 0.000000
-    ```
+}
+```
+```bash
+The value of myvariable1 is : 0
+The value of myvariable2 is :
+The value of myvariable3 is : 0.000000
+```
     - If you use type, then you are allowed to declare multiple variables of the same type in the single declaration. Example:
     ```go
     // Go program to illustrate
     // concept of variable
     package main
     import "fmt"
- 
+
     func main() {
- 
+
     // Multiple variables of the same type
     // are declared and initialized
     // in the single line
     var myvariable1, myvariable2, myvariable3 int = 2, 454, 67
- 
-   // Display the values of the variables
-   fmt.Printf("The value of myvariable1 is : %d\n",
-                                       myvariable1)
 
-   fmt.Printf("The value of myvariable2 is : %d\n",
-                                       myvariable2)
+// Display the values of the variables
+fmt.Printf("The value of myvariable1 is : %d\n",
+myvariable1)
 
-   fmt.Printf("The value of myvariable3 is : %d",
-                                      myvariable3)
-   }
-   ```
-   ```bash
-   The value of myvariable1 is : 2 
-   The value of myvariable2 is : 454
-   The value of myvariable3 is : 67
-   ```
+fmt.Printf("The value of myvariable2 is : %d\n",
+myvariable2)
 
-   - If you remove type, then you are allowed to declare multiple variables of a different type in the single declaration. The type of variables is determined by the initialized values. Example:
-   ```go
-   // Go program to illustrate
-   // concept of variable
-   package main
-   import "fmt"
+fmt.Printf("The value of myvariable3 is : %d",
+myvariable3)
+}
 
-   func main() {
+````
+```bash
+The value of myvariable1 is : 2
+The value of myvariable2 is : 454
+The value of myvariable3 is : 67
+````
 
-   // Multiple variables of different types
-   // are declared and initialized in the single line
-   var myvariable1, myvariable2, myvariable3 = 2, "GFG", 67.56
+- If you remove type, then you are allowed to declare multiple variables of a different type in the single declaration. The type of variables is determined by the initialized values. Example:
 
-   // Display the value and 
-   // type of the variables
-   fmt.Printf("The value of myvariable1 is : %d\n",
-                                    myvariable1)
+```go
+// Go program to illustrate
+// concept of variable
+package main
+import "fmt"
 
-   fmt.Printf("The type of myvariable1 is : %T\n",
-                                   myvariable1)
+func main() {
 
-   fmt.Printf("\nThe value of myvariable2 is : %s\n",
-                                     myvariable2)
+// Multiple variables of different types
+// are declared and initialized in the single line
+var myvariable1, myvariable2, myvariable3 = 2, "GFG", 67.56
 
-   fmt.Printf("The type of myvariable2 is : %T\n",
-                                   myvariable2)
+// Display the value and
+// type of the variables
+fmt.Printf("The value of myvariable1 is : %d\n",
+                                 myvariable1)
 
-   fmt.Printf("\nThe value of myvariable3 is : %f\n",
-                                      myvariable3)
+fmt.Printf("The type of myvariable1 is : %T\n",
+                                myvariable1)
 
-   fmt.Printf("The type of myvariable3 is : %T\n",
+fmt.Printf("\nThe value of myvariable2 is : %s\n",
+                                  myvariable2)
+
+fmt.Printf("The type of myvariable2 is : %T\n",
+                                myvariable2)
+
+fmt.Printf("\nThe value of myvariable3 is : %f\n",
                                    myvariable3)
-   }
-   ```
-   ```bash
-   The value of myvariable1 is : 2
-   The type of myvariable1 is : int
 
-   The value of myvariable2 is : GFG
-   The type of myvariable2 is : string
+fmt.Printf("The type of myvariable3 is : %T\n",
+                                myvariable3)
+}
+```
 
-   The value of myvariable3 is : 67.560000
-   The type of myvariable3 is : float64
-   ```
-   
-   - You are allowed to initialize a set of variables by the calling function that returns multiple values. Example:
+```bash
+The value of myvariable1 is : 2
+The type of myvariable1 is : int
+
+The value of myvariable2 is : GFG
+The type of myvariable2 is : string
+
+The value of myvariable3 is : 67.560000
+The type of myvariable3 is : float64
+```
+
+- You are allowed to initialize a set of variables by the calling function that returns multiple values. Example:
+
+
     ```go
     // Here, os.Open function return a
     // file in i variable and an error
@@ -192,7 +204,7 @@
     ```go
     variable_name:= expression
     ```
-    **Note: Please don't confuse in between := and = as := is a declaration and = is assignment.** 
+    **Note: Please don't confuse in between := and = as := is a declaration and = is assignment.**
     **Important Points:**
      In the above expression, the type of the variable is determined by the type of the expression. Example:
      ```go
@@ -204,8 +216,8 @@
      func main() {
 
      // Using short variable declaration
-     myvar1 := 39 
-     myvar2 := "GeeksforGeeks" 
+     myvar1 := 39
+     myvar2 := "GeeksforGeeks"
      myvar3 := 34.67
 
      // Display the value and type of the variables
@@ -243,11 +255,11 @@
 
        // Using short variable declaration
        // Multiple variables of same types
-       // are declared and initialized in 
+       // are declared and initialized in
        // the single line
        myvar1, myvar2, myvar3 := 800, 34, 56
 
-       // Display the value and 
+       // Display the value and
        // type of the variables
        fmt.Printf("The value of myvar1 is : %d\n", myvar1)
        fmt.Printf("The type of myvar1 is : %T\n", myvar1)
@@ -267,12 +279,12 @@
        The type of myvar2 is : int
 
        The value of myvar3 is : 56
-       The type of myvar3 is : int 
+       The type of myvar3 is : int
        ```
        - In a short variable declaration, you are allowed to initialize a set of variables by the calling function that returns multiple values. Example:
-       ```go 
-       // Here, os.Open function return 
-       // a file in i variable and an 
+       ```go
+       // Here, os.Open function return
+       // a file in i variable and an
        // error in j variable
        i, j := os.Open(name)
        ```
@@ -291,7 +303,7 @@
         // as an assignment for myvar2 variable
         // because same variable present in the same block
         // so the value of myvar2 is changed from 45 to 100
-        myvar1, myvar2 := 39, 45 
+        myvar1, myvar2 := 39, 45
         myvar3, myvar2 := 45, 100
 
         // If you try to run the commented lines,
@@ -303,7 +315,7 @@
         // Display the values of the variables
         fmt.Printf("The value of myvar1 and myvar2 is : %d %d\n",
                                           myvar1, myvar2)
-                                          
+
         fmt.Printf("The value of myvar3 and myvar2 is : %d %d\n",
                                           myvar3, myvar2)
         }
@@ -360,10 +372,10 @@
         name = "John Doe";
 
         func main() {
-	    var fruit string //? Varibale Two
-	    fruit = "Apple";
-	    fmt.Println(name);
-	    fmt.Println(fruit);
+        var fruit string //? Varibale Two
+        fruit = "Apple";
+        fmt.Println(name);
+        fmt.Println(fruit);
         }
         ```
         **❌ The Problem:**
@@ -390,23 +402,23 @@
 
         ```go
         name := "John Doe" // ✅ only allowed inside functions
-        // 
+        //
         ```
 
         ### ✅ Corrected Code:
 
         ```go
         package main
-        
+
         import "fmt"
-        
+
         var name string = "John Doe" // ✅ Declare + assign at top level
         func main() {
-	    var fruit string //? Variable Two
-	    fruit = "Apple"  // ✅ Assignment inside function
+        var fruit string //? Variable Two
+        fruit = "Apple"  // ✅ Assignment inside function
 
-	    fmt.Println(name)
-	    fmt.Println(fruit)
+        fmt.Println(name)
+        fmt.Println(fruit)
         }
         ```
         ```go
@@ -417,11 +429,11 @@
         var name string; //? Declare Here
 
         func main() {
-	    name="John Doe"
-	    var fruit string //? Assign Here
-	    fruit = "Apple";
-	    fmt.Println(name);
-	    fmt.Println(fruit);
+        name="John Doe"
+        var fruit string //? Assign Here
+        fruit = "Apple";
+        fmt.Println(name);
+        fmt.Println(fruit);
         }
         ```
 
@@ -432,14 +444,9 @@
         That means:
         ✅ **Variable declarations**
         ❌ **Assignments** (like `name = "John Doe"`) without a declaration
-        
+
         **🎯 Bonus Tip**:
         You can even shorten your top-level declaration like this:
         ```go
         var name = "John Doe" // Go will infer it's a string
         ```
-
-
-
-
-   
