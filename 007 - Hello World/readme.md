@@ -20,7 +20,7 @@ func main(){
 - **import "fmt"** — Imports the fmt package for formatted I/O (like printing).
   - To use built-in or external functionality in Go, you use ``import``.
   - `fmt` is a standard Go package used for formatting text and printing output.
-  - ``fmt` stands for format, and it allows you to print to the terminal with commands like `fmt.Println()`.
+  - `fmt` stands for format, and it allows you to print to the terminal with commands like `fmt.Println()`.
   - Here, `import` keyword is used to import packages in your program and fmt package is used to implement formatted Input/Output with functions.
 
 - **func main()** — Entry point of the Go program.
