@@ -112,19 +112,19 @@ The value of myvariable1 is : 0
 The value of myvariable2 is :
 The value of myvariable3 is : 0.000000
 ```
-    - If you use type, then you are allowed to declare multiple variables of the same type in the single declaration. Example:
-    ```go
-    // Go program to illustrate
-    // concept of variable
-    package main
-    import "fmt"
+- If you use type, then you are allowed to declare multiple variables of the same type in the single declaration. Example:
+```go
+// Go program to illustrate
+// concept of variable
+package main
+import "fmt"
 
-    func main() {
+func main() {
 
-    // Multiple variables of the same type
-    // are declared and initialized
-    // in the single line
-    var myvariable1, myvariable2, myvariable3 int = 2, 454, 67
+// Multiple variables of the same type
+// are declared and initialized
+// in the single line
+var myvariable1, myvariable2, myvariable3 int = 2, 454, 67
 
 // Display the values of the variables
 fmt.Printf("The value of myvariable1 is : %d\n",
@@ -136,8 +136,7 @@ myvariable2)
 fmt.Printf("The value of myvariable3 is : %d",
 myvariable3)
 }
-
-````
+```
 ```bash
 The value of myvariable1 is : 2
 The value of myvariable2 is : 454
@@ -194,20 +193,20 @@ The type of myvariable3 is : float64
 - You are allowed to initialize a set of variables by the calling function that returns multiple values. Example:
 
 
-    ```go
-    // Here, os.Open function return a
-    // file in i variable and an error
-    // in j variable
-    var i, j = os.Open(name)
-    ```
-    1. Using short variable declaration: The local variables which are declared and initialize in the functions are declared by using short variable declaration. Syntax:
-    ```go
-    variable_name:= expression
-    ```
-    **Note: Please don't confuse in between := and = as := is a declaration and = is assignment.**
-    **Important Points:**
-     In the above expression, the type of the variable is determined by the type of the expression. Example:
-     ```go
+```go
+// Here, os.Open function return a
+// file in i variable and an error
+// in j variable
+var i, j = os.Open(name)
+```
+2. **Using short variable declaration**: The local variables which are declared and initialize in the functions are declared by using short variable declaration. Syntax:
+```go
+variable_name:= expression
+```
+**Note: Please don't confuse in between := and = as := is a declaration and = is assignment.**
+### **Important Points:**
+In the above expression, the type of the variable is determined by the type of the expression. Example:
+```go
      // Go program to illustrate
      // concept of variable
      package main
@@ -230,8 +229,8 @@ The type of myvariable3 is : float64
      fmt.Printf("\nThe value of myvar3 is : %f\n", myvar3)
      fmt.Printf("The type of myvar3 is : %T\n", myvar3)
      }
-     ```
-     ```bash
+```
+```bash
      The value of myvar1 is : 39
      The type of myvar1 is : int
 
@@ -240,12 +239,12 @@ The type of myvariable3 is : float64
 
      The value of myvar3 is : 34.670000
      The type of myvar3 is : float64
-     ```
-     - Most of the local variables are declared and initialized by using short variable declarations due to their brevity and flexibility.
-     - The var declaration of variables are used for those local variables which need an explicit type that differs from the initializer expression, or for those variables whose values are assigned later and the initialized value is unimportant.
-     - Using short variable declaration you are allowed to declare multiple variables in the single declaration
-       Example:
-        ```go
+```
+- Most of the local variables are declared and initialized by using short variable declarations due to their brevity and flexibility.
+- The var declaration of variables are used for those local variables which need an explicit type that differs from the initializer expression, or for those variables whose values are assigned later and the initialized value is unimportant.
+- Using short variable declaration you are allowed to declare multiple variables in the single declaration
+Example:
+```go
        // Go program to illustrate
        // concept of variable
        package main
@@ -270,8 +269,8 @@ The type of myvariable3 is : float64
        fmt.Printf("\nThe value of myvar3 is : %d\n", myvar3)
        fmt.Printf("The type of myvar3 is : %T\n", myvar3)
        }
-       ```
-       ```bash
+```
+```bash
        The value of myvar1 is : 800
        The type of myvar1 is : int
 
@@ -280,17 +279,17 @@ The type of myvariable3 is : float64
 
        The value of myvar3 is : 56
        The type of myvar3 is : int
-       ```
-       - In a short variable declaration, you are allowed to initialize a set of variables by the calling function that returns multiple values. Example:
-       ```go
+```
+- In a short variable declaration, you are allowed to initialize a set of variables by the calling function that returns multiple values. Example:
+```go
        // Here, os.Open function return
        // a file in i variable and an
        // error in j variable
        i, j := os.Open(name)
-       ```
+```
 
-       - A short variable declaration acts like an assignment only when for those variables that are already declared in the same lexical block. The variables that are declared in the outer block are ignored. And at least one variable is a new variable out of these two variables as shown in the below example. Example:
-        ```go
+- A short variable declaration acts like an assignment only when for those variables that are already declared in the same lexical block. The variables that are declared in the outer block are ignored. And at least one variable is a new variable out of these two variables as shown in the below example. Example:
+```go
         // Go program to illustrate
         // concept of variable
         package main
@@ -319,14 +318,14 @@ The type of myvariable3 is : float64
         fmt.Printf("The value of myvar3 and myvar2 is : %d %d\n",
                                           myvar3, myvar2)
         }
-        ```
-        ```bash
+```
+```bash
         The value of myvar1 and myvar2 is : 39 100
         The value of myvar3 and myvar2 is : 45 100
-        ```
+```
 
-        - Using short variable declaration you are allowed to declare multiple variables of different types in the single declaration. The type of these variables are determined by the expression. Example:
-        ```go
+- Using short variable declaration you are allowed to declare multiple variables of different types in the single declaration. The type of these variables are determined by the expression. Example:
+```go
         // Go program to illustrate
         // concept of variable
         package main
@@ -349,8 +348,8 @@ The type of myvariable3 is : float64
         fmt.Printf("\nThe value of myvar3 is : %f\n", myvar3)
         fmt.Printf("The type of myvar3 is : %T\n", myvar3)
         }
-        ```
-        ```bash
+```
+```bash
         The value of myvar1 is : 800
         The type of myvar1 is : int
 
@@ -359,11 +358,11 @@ The type of myvariable3 is : float64
 
         The value of myvar3 is : 47.560000
         The type of myvar3 is : float64
-        ```
+```
 
-        ----------------------------------------------------------
-        ## In Go, top-level (global) code can only contain declarations, not assignments.
-        ```go
+***----------------------------------------------------------**
+## In Go, top-level (global) code can only contain declarations, not assignments.
+```go
         package main
 
         import "fmt"
@@ -377,37 +376,37 @@ The type of myvariable3 is : float64
         fmt.Println(name);
         fmt.Println(fruit);
         }
-        ```
-        **❌ The Problem:**
+```
+**❌ The Problem:**
 
-        You wrote this at the **top-level** of the file (outside `func main()`):
+You wrote this at the **top-level** of the file (outside `func main()`):
 
-        ```go
+```go
         var name string; //? Variable One
         name = "John Doe";
-        ```
-        **In **Go**, top-level (global) code can **only contain declarations**, not assignments.**
+```
+**In **Go**, top-level (global) code can **only contain declarations**, not assignments.**
 
-        **✅ Solution**:
+**✅ Solution**:
 
-        You must either:
+You must either:
 
-        ### Option 1: Declare and assign **in one line**:
+### Option 1: Declare and assign **in one line**:
 
-        ```go
+```go
         var name string = "John Doe"
-        ```
+```
 
-        ### Option 2: Use short form only **inside** a function:
+### Option 2: Use short form only **inside** a function:
 
-        ```go
+```go
         name := "John Doe" // ✅ only allowed inside functions
         //
-        ```
+```
 
-        ### ✅ Corrected Code:
+### ✅ Corrected Code:
 
-        ```go
+```go
         package main
 
         import "fmt"
@@ -420,8 +419,8 @@ The type of myvariable3 is : float64
         fmt.Println(name)
         fmt.Println(fruit)
         }
-        ```
-        ```go
+```
+```go
         package main
 
         import "fmt"
@@ -435,18 +434,18 @@ The type of myvariable3 is : float64
         fmt.Println(name);
         fmt.Println(fruit);
         }
-        ```
+```
 
-         **⏳ Why This Happens?**
+**⏳ Why This Happens?**
 
-        Go is a **compiled language**, and outside of functions, it needs everything to be **declarative and static**.
+Go is a **compiled language**, and outside of functions, it needs everything to be **declarative and static**.
 
-        That means:
-        ✅ **Variable declarations**
-        ❌ **Assignments** (like `name = "John Doe"`) without a declaration
+That means:
+✅ **Variable declarations**
+❌ **Assignments** (like `name = "John Doe"`) without a declaration
 
-        **🎯 Bonus Tip**:
-        You can even shorten your top-level declaration like this:
-        ```go
+**🎯 Bonus Tip**:
+You can even shorten your top-level declaration like this:
+```go
         var name = "John Doe" // Go will infer it's a string
-        ```
+```
