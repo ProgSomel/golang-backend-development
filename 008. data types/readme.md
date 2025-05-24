@@ -22,6 +22,8 @@
 
 **Array types and structure types are collectively referred to as aggregate types. The type of a function specifies the set of all functions with the same parameter and result types.**
 
+**--------------------------------------------------------------------------------------------------------------------**
+
 # Boolean Types
 In Go, bool is the single type representing Boolean values. It is widely used in logical and conditional operations. It can accept only two values which are "true" or "false".
 ```go
@@ -74,9 +76,9 @@ fmt.Println(isRunning) // false
 | 7      | `int32`  | Signed 32-bit integers (-2147483648 to 2147483647) |
 | 8      | `int64`  | Signed 64-bit integers (-9223372036854775808 to 9223372036854775807) |
 ```
-## **int**	Depends on system (32/64 bits)
-## **uint**	System-dependent
-## **uint**	System-dependent
+**int**	Depends on system (32/64 bits)
+**uint**	System-dependent
+**uint**	System-dependent
 
 **Example**
 The following is an example of how the integer types are used in Go:
