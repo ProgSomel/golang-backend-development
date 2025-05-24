@@ -28,40 +28,42 @@
    ```
 
     **Important Points**:
-     - In the above syntax, either type or = expression can be omitted, but not both.
-     - If the = expression is omitted, then the variable value is determined by its type's default value. The default value is usually 0.
-     - If the type is removed, then the type of the variable is determined by the value-initialize in the expression. Example:
-     ```go
-     // Go program to illustrate 
-     // concept of variable
-     package main
 
-     import "fmt"
+    - In the above syntax, either type or = expression can be omitted, but not both.
+    - If the = expression is omitted, then the variable value is determined by its type's default value. The default value is usually 0.
+    - If the type is removed, then the type of the variable is determined by the value-initialize in the expression. Example:
+  
+    ```go
+    // Go program to illustrate 
+    // concept of variable
+    package main
 
-     func main() {
+    import "fmt"
 
-     // Variable declared and 
-     // initialized without the 
-     // explicit type
-     var myvariable1 = 20
-     var myvariable2 = "GeeksforGeeks"
-     var myvariable3 = 34.80
+    func main() {
 
-     // Display the value and the
-     // type of the variables
-     fmt.Printf("The value of myvariable1 is : %d\n",
+    // Variable declared and 
+    // initialized without the 
+    // explicit type
+    var myvariable1 = 20
+    var myvariable2 = "GeeksforGeeks"
+    var myvariable3 = 34.80
+
+    // Display the value and the
+    // type of the variables
+    fmt.Printf("The value of myvariable1 is : %d\n",
                                   myvariable1)                        
-     fmt.Printf("The type of myvariable1 is : %T\n",
+    fmt.Printf("The type of myvariable1 is : %T\n",
                                   myvariable1)
-     fmt.Printf("The value of myvariable2 is : %s\n",
+    fmt.Printf("The value of myvariable2 is : %s\n",
                                       myvariable2)
-     fmt.Printf("The type of myvariable2 is : %T\n",
+    fmt.Printf("The type of myvariable2 is : %T\n",
                                   myvariable2)
-     fmt.Printf("The value of myvariable3 is : %f\n",
+    fmt.Printf("The value of myvariable3 is : %f\n",
                                       myvariable3)
-     fmt.Printf("The type of myvariable3 is : %T\n",
+    fmt.Printf("The type of myvariable3 is : %T\n",
                                   myvariable3)
-     }
+    }
     ```
     ```bash
     The value of myvariable1 is : 20
@@ -186,7 +188,7 @@
     // in j variable
     var i, j = os.Open(name)
     ```
-    2. Using short variable declaration: The local variables which are declared and initialize in the functions are declared by using short variable declaration. Syntax:
+    1. Using short variable declaration: The local variables which are declared and initialize in the functions are declared by using short variable declaration. Syntax:
     ```go
     variable_name:= expression
     ```
