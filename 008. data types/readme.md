@@ -58,3 +58,56 @@ If you declare a bool without assigning a value, it will be false by default.
 var isRunning bool
 fmt.Println(isRunning) // false
 ```
+
+**--------------------------------------------------------------------------------------------------------------------**
+
+# integer types
+```md
+| Sr.No. | Type    | Description                                   |
+|--------|---------|-----------------------------------------------|
+| 1      | `uint8`  | Unsigned 8-bit integers (0 to 255)            |
+| 2      | `uint16` | Unsigned 16-bit integers (0 to 65535)         |
+| 3      | `uint32` | Unsigned 32-bit integers (0 to 4294967295)    |
+| 4      | `uint64` | Unsigned 64-bit integers (0 to 18446744073709551615) |
+| 5      | `int8`   | Signed 8-bit integers (-128 to 127)           |
+| 6      | `int16`  | Signed 16-bit integers (-32768 to 32767)      |
+| 7      | `int32`  | Signed 32-bit integers (-2147483648 to 2147483647) |
+| 8      | `int64`  | Signed 64-bit integers (-9223372036854775808 to 9223372036854775807) |
+```
+## **int**	Depends on system (32/64 bits)
+## **uint**	System-dependent
+## **uint**	System-dependent
+
+**Example**
+The following is an example of how the integer types are used in Go:
+```go
+package main
+
+import "fmt"
+
+func main() {
+    // Unsigned integers
+    var u8 uint8 = 255
+    var u16 uint16 = 65535
+
+    // Signed integers
+    var i8 int8 = -128
+    var i16 int16 = 32767
+
+    // Printing values
+    fmt.Println("Unsigned 8-bit integer (uint8):", u8)
+    fmt.Println("Unsigned 16-bit integer (uint16):", u16)
+    fmt.Println("Signed 8-bit integer (int8):", i8)
+    fmt.Println("Signed 16-bit integer (int16):", i16)
+}
+```
+```bash
+Unsigned 8-bit integer (uint8): 255
+Unsigned 16-bit integer (uint16): 65535
+Signed 8-bit integer (int8): -128
+Signed 16-bit integer (int16): 32767
+```
+## ⚠️ Important Notes:
+- Use **signed types** when you expect negative values.
+- Use **unsigned types** if you know the value can't be negative — e.g., file sizes, memory addresses.
+- Be cautious mixing **signed and unsigned types** in expressions.
