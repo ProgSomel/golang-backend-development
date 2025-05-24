@@ -171,3 +171,15 @@ Imaginary part of second complex number: 4
 - Use **float32** when memory is a concern.
 - Prefer **float64** for most accurate calculations.
 - Be aware of floating-point **rounding errors** (they're not always 100% precise).
+
+**--------------------------------------------------------------------------------------------------------------------**
+## Other Numeric Types
+There is also a set of numeric types with implementation-specific sizes −
+
+| Sr.No. | Type     | Description                                                  |
+|--------|----------|--------------------------------------------------------------|
+| 1      | `byte`    | Same as `uint8`                                              |
+| 2      | `rune`    | Same as `int32`                                              |
+| 3      | `uint`    | Either 32 or 64 bits (architecture-dependent)                |
+| 4      | `int`     | Same size as `uint` (architecture-dependent)                 |
+| 5      | `uintptr` | Unsigned integer used to store the uninterpreted bits of a pointer |
