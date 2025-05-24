@@ -21,11 +21,11 @@
 	fmt.Println(fruit);
    }
    ```
-    ```bash
-    //output
-    John Doe
-    Apple
-    ```
+   ```bash
+   //output
+   John Doe
+   Apple
+   ```
 
     **Important Points**:
      - In the above syntax, either type or = expression can be omitted, but not both.
