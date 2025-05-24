@@ -63,7 +63,8 @@ fmt.Println(isRunning) // false
 
 **--------------------------------------------------------------------------------------------------------------------**
 
-# integer types
+# Numeric Types
+## integer
 ```md
 | Sr.No. | Type    | Description                                   |
 |--------|---------|-----------------------------------------------|
@@ -113,3 +114,60 @@ Signed 16-bit integer (int16): 32767
 - Use **signed types** when you expect negative values.
 - Use **unsigned types** if you know the value can't be negative — e.g., file sizes, memory addresses.
 - Be cautious mixing **signed and unsigned types** in expressions.
+
+**--------------------------------------------------------------------------------------------------------------------**
+
+## Floating-Point and Complex Types
+
+| Sr.No. | Type        | Description                                                  |
+|--------|-------------|--------------------------------------------------------------|
+| 1      | `float32`    | IEEE-754 32-bit floating-point numbers                       |
+| 2      | `float64`    | IEEE-754 64-bit floating-point numbers                       |
+| 3      | `complex64`  | Complex numbers with `float32` real and imaginary parts      |
+| 4      | `complex128` | Complex numbers with `float64` real and imaginary parts      |
+
+> **Note:** The value of an *n*-bit integer is *n* bits and is represented using two's complement arithmetic operations.
+> 🔍 **float64** is the default for floating-point numbers in Go.
+
+**Example**
+The following is an example of how the float types are used in Go:
+```go
+package main
+
+import "fmt"
+
+func main() {
+    var pi float32 = 3.14159
+    var e float64 = 2.718281828459045
+
+    var firstComplexNumber complex64 = complex(1.0, 2.0)
+    var secondComplexNumber complex128 = complex(3.0, 4.0)
+
+    // Printing values
+    fmt.Println("Value of pi (float32):", pi)
+    fmt.Println("Value of e (float64):", e)
+    fmt.Println("First complex number (complex64):", firstComplexNumber)
+    fmt.Println("Second complex number (complex128):", secondComplexNumber)
+
+    // Printing real and imaginary parts
+    fmt.Println("Real part of first complex number:", real(firstComplexNumber))
+    fmt.Println("Imaginary part of first complex number:", imag(firstComplexNumber))
+
+    fmt.Println("Real part of second complex number:", real(secondComplexNumber))
+    fmt.Println("Imaginary part of second complex number:", imag(secondComplexNumber))
+}
+```
+```bash
+Value of pi (float32): 3.14159
+Value of e (float64): 2.718281828459045
+First complex number (complex64): (1+2i)
+Second complex number (complex128): (3+4i)
+Real part of first complex number: 1
+Imaginary part of first complex number: 2
+Real part of second complex number: 3
+Imaginary part of second complex number: 4
+```
+**⚠️ Key Points:**
+- Use **float32** when memory is a concern.
+- Prefer **float64** for most accurate calculations.
+- Be aware of floating-point **rounding errors** (they're not always 100% precise).
