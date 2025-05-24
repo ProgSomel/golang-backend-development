@@ -449,3 +449,8 @@ You can even shorten your top-level declaration like this:
 ```go
         var name = "John Doe" // Go will infer it's a string
 ```
+
+## Important Links
+[nesohq](https://nesohq.github.io/bgce-archive/)
+[dev](https://dev.to/diwakarkashyap/variables-in-go-golang-34b4)
+[tutorialspoint](https://www.tutorialspoint.com/go/go_variables.htm)
