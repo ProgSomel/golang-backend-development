@@ -183,3 +183,199 @@ There is also a set of numeric types with implementation-specific sizes −
 | 3      | `uint`    | Either 32 or 64 bits (architecture-dependent)                |
 | 4      | `int`     | Same size as `uint` (architecture-dependent)                 |
 | 5      | `uintptr` | Unsigned integer used to store the uninterpreted bits of a pointer |
+
+**-------------------------------------------------------------------------------------------------------------------**
+# Derived Types
+In Go language, the derived data types are based on other types. They can be created with the help of other data types.
+Here are the most commonly used derived types in Go:
+
+| Type      | Description                                                    |
+|-----------|----------------------------------------------------------------|
+| `Array`   | A fixed-size sequence of elements of the same type.            |
+| `Slice`   | A dynamically-sized, more flexible view into arrays.           |
+| `Map`     | A key-value pair collection (like a dictionary).               |
+| `Struct`  | A collection of fields, often used to represent records.       |
+| `Pointer` | A variable that stores the memory address of another variable. |
+| `Function`| Functions themselves are also types.                           |
+| `Interface` | Specifies method signatures (used for abstraction).          |
+| `Channel` | Used for communication between goroutines (concurrency).       |
+
+## Pointer Types
+The pointer data type stores the memory address of another variable.
+Here is an example of pointer type:
+```go
+package main
+
+import "fmt"
+
+func main() {
+	var x int = 42
+	var ptr *int = &x
+	fmt.Println(*ptr)
+}
+```
+```bash
+42
+```
+------------------------------------------------------------------------------------------------------------------------
+
+## Array Types
+The array data type is a fixed-size sequence of elements of the same type. It is used to store multiple values of the same data type in a variable.
+
+Here is an example of array type:
+```go
+package main
+
+import "fmt"
+
+func main() {
+	var arr [3]int = [3]int{10, 22, 31}
+	fmt.Println(arr)
+}
+```
+```bash
+[10 22 31]
+```
+------------------------------------------------------------------------------------------------------------------------
+## Structure Types
+The structure (struct) data type is a collection of fields, each with a name and a type. The structure type allows you to store different types of values.
+
+Here is an example of structure type:
+```go
+package main
+
+import "fmt"
+
+func main() {
+   type Student struct {
+      Name string
+      Age  int
+   }
+   var std Student = Student{"Prakash Joshi", 30}
+   fmt.Println(std)
+}
+```
+```bash
+{Prakash Joshi 30}
+```
+------------------------------------------------------------------------------------------------------------------------
+
+## Union Types
+Go language does not provide the support of unions, but unions can be used as interface{} to hold any type of value.
+
+Here is an example:
+```go
+package main
+
+import "fmt"
+
+func main() {
+   var u interface {} = "Prakash Joshi"
+   fmt.Println(u)
+   u = 30
+   fmt.Println(u)
+   u = "Teja"
+   fmt.Println(u)
+}
+```
+```bash
+Prakash Joshi
+30
+Teja
+```
+-----------------------------------------------------------------------------------------------------------------------
+
+## Function Types
+The function is used for organizing and structuring the code, allowing grouping of the related code together in purpose to make it reusable and easy to maintain.
+
+Here is an example:
+```go
+package main
+
+import "fmt"
+
+func main() {
+    var AddTwoNums = func(a, b int) int { 
+        return a + b 
+    }
+    
+    // Calling
+    fmt.Println(AddTwoNums(10, 20))  
+}
+```
+```bash
+30
+```
+------------------------------------------------------------------------------------------------------------------------
+
+## Slice Types
+In Go language, the slice type is a dynamically sized and flexible view of an array.
+
+Here is an example:
+```go
+package main
+
+import "fmt"
+
+func main() {
+    var arr []int = []int{11, 22, 33, 44}
+    fmt.Println(arr) 
+}
+```
+```bash
+[11 22 33 44]
+```
+-----------------------------------------------------------------------------------------------------------------------
+
+## Map Types
+The map data type is an unordered collection of key-value pairs.
+
+Here is an example to demonstrate how you can use the map data type in Go:
+```go
+package main
+
+import "fmt"
+
+func main() {
+    // Creating a map to store 
+    // country names and their country codes
+    var countryCodes = map[string]string{
+        "USA":    "+1",
+        "India":  "+91",
+        "China":  "+86",
+        "Brazil": "+55",
+        "UK":     "+44",
+    }
+
+    // Printing the map
+    fmt.Println(countryCodes)
+
+    // Accessing a specific country's code
+    fmt.Println("Country code for India:", countryCodes["India"])
+}
+```
+```bash
+map[Brazil:+55 China:+86 India:+91 UK:+44 USA:+1]
+Country code for India: +91
+```
+
+----------------------------------------------------------------------------------------------------------------------
+
+## Channel Types
+The channels are useful when you are working with goroutines; these types are used for communication between goroutines.
+
+Here is an example to demonstrate how you can use the channels in Go:
+```go
+package main
+
+import "fmt"
+
+func main() {
+    ch := make(chan int)
+    go func() { ch <- 42 }()
+    fmt.Println(<-ch)  
+}
+```
+```bash
+42
+```
