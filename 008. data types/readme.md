@@ -64,7 +64,7 @@ fmt.Println(isRunning) // false
 **--------------------------------------------------------------------------------------------------------------------**
 
 # Numeric Types
-## integer
+## Integer Types
 ```md
 | Sr.No. | Type    | Description                                   |
 |--------|---------|-----------------------------------------------|
@@ -81,7 +81,7 @@ fmt.Println(isRunning) // false
 **uint**	System-dependent
 **uint**	System-dependent
 
-**Example**
+**Example**<br>
 The following is an example of how the integer types are used in Go:
 ```go
 package main
@@ -126,7 +126,7 @@ Signed 16-bit integer (int16): 32767
 | 3      | `complex64`  | Complex numbers with `float32` real and imaginary parts      |
 | 4      | `complex128` | Complex numbers with `float64` real and imaginary parts      |
 
-> **Note:** The value of an *n*-bit integer is *n* bits and is represented using two's complement arithmetic operations.
+> **Note:** The value of an *n*-bit integer is *n* bits and is represented using two's complement arithmetic operations.<br>
 > 🔍 **float64** is the default for floating-point numbers in Go.
 
 **Example**
