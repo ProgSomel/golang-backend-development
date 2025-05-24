@@ -7,7 +7,7 @@ A **variable** is like a **Container** where you can **store data** — numbers,
 
 ### \*In Go language variables are created in two different ways:
 
-1. **Using var keyword**: In Go language, variables are created using `var` keyword of a particular type, connected with name and provide its initial value. Syntax:
+# 1. **Using var keyword**: In Go language, variables are created using `var` keyword of a particular type, connected with name and provide its initial value. Syntax:
 
 ```go
 var variable_name type = expression
@@ -199,7 +199,7 @@ The type of myvariable3 is : float64
 // in j variable
 var i, j = os.Open(name)
 ```
-2. **Using short variable declaration**: The local variables which are declared and initialize in the functions are declared by using short variable declaration. Syntax:
+# 2. **Using short variable declaration**: The local variables which are declared and initialize in the functions are declared by using short variable declaration. Syntax:
 ```go
 variable_name:= expression
 ```
@@ -360,7 +360,7 @@ Example:
         The type of myvar3 is : float64
 ```
 
-***----------------------------------------------------------**
+**---------------------------------------------------------------------------------------------------------------------**
 ## In Go, top-level (global) code can only contain declarations, not assignments.
 ```go
         package main
