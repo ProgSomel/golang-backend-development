@@ -65,3 +65,11 @@ Now come to the Go concurrency and Goroutine. Goes concurrency model relies heav
 And when we are talking about go language, we mean the go language, the go syntax, the design of the language along with the go compiler and go runtime. And this complete package of go language helps us make better programs, helps us make highly efficient programs
 Go programs also depend on runtime libraries provided by the go runtime, such as those for reflection, channel operations and other language features. These libraries help facilite common programming tasks and provide support for go specific features. The go runtime also ensures that go programs behave consistently across different operating systems and hardware architectures, abstracting away platform specific details and providing a uniform execution environment
 **In summary, while Go compiles to machine code, the go runtime is essential for managing memory, supporting concurrent execution via go routines, providing runtime libraries, and ensuring cross-platform compatibility.**
+
+**----------------------------------------------------------------------------------------------------------------------------------**
+
+# The Go Standard Library
+The standard library refers to a comprehensive collection of package, modules that are included with go installation. These packages provide essential functionalities for building and executing Go programs across different platforms and environments. The standard library covers a wide range of tasks including input output operations, networking, text processing, concurrency, cryptography, and much, much more.
+```go
+import "fmt"
+```
