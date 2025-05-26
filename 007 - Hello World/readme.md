@@ -73,3 +73,75 @@ The standard library refers to a comprehensive collection of package, modules th
 ```go
 import "fmt"
 ```
+
+**--------------------------------------------------------------------------------------------------------------------------------**
+
+# Import Statement
+**🧠 Syntax:**
+```go
+import "package-name"
+```
+Or, if you're importing multiple packages:
+```go
+import (
+    "fmt"
+    "math"
+    "time"
+)
+```
+**📦 Example 1: Using the standard fmt package**
+```go
+package main
+
+import "fmt"
+
+func main() {
+    fmt.Println("Hello, Go!")
+}
+```
+> Here, **fmt** is the package for **formatted I/O** (like printing to the console).<br>
+
+**✅ Multiple Imports**
+```go
+import (
+    "fmt"
+    "math"
+)
+
+func main() {
+    fmt.Println("Square root of 16 is", math.Sqrt(16))
+}
+```
+
+**🔍 Aliased Import or named import**
+You can rename a package when importing it:
+```go
+import f "fmt"
+
+func main() {
+    f.Println("Hello with alias!")
+}
+```
+
+**❌ Blank Identifier Import (for side-effects only)**
+```go
+import _ "net/http/pprof"
+```
+- This means: import the package just to run its init() function.
+- Useful when a package registers itself without being used directly.
+
+## Tree Shaking
+Tree shaking is a technique used in other language as well, like Javascript, to eliminate dead or unused code from the final executable or final bundle, thereby reducing its size and improving performance of the final bundle or the final executable.
+
+**How it operates:**
+During the build process, tree shaking statically analyzes the code base to determine which modules and functions are directly imported and used. Unused modules and functions identified During static analysis are labeled as dead code.
+Tree shaking then removes these unused segments from the final output, optimizing the bundle or executable sixe.
+
+- Example in Popular Frameworks
+  - React
+  - Angulat
+
+- Benefits of Tree shaking
+  - Reduce Bundle Size
+  - Improved performance
+  - Efficient Dependency Management
