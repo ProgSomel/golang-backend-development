@@ -1,5 +1,5 @@
-# Defer ----> Every Defer Function muat create closure
-**There is a cell in stack frame which is called defer list pointer(it holds a address of closure which is stored in heap)**
+# Defer ---> use LinkedList Data Structure
+**There is a cell in stack frame which is called defer list pointer(it holds a address of closure which is stored in heap) actually defer use linkedlist**
 In Go, defer is a keyword that delays the execution of a function until the surrounding function returns. when it will get the the return before that it defer will be executed. Runtime will execute it
 
 ```go
