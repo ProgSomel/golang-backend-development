@@ -44,19 +44,18 @@
 
 ## 🖥️ Memory Layout with Separate Stacks (Visual)
 
-Thread 1 Thread 2 Thread 3
+```less
+Thread 1         Thread 2         Thread 3
+--------         --------         --------
+| funcC |        | funcX |        |        |
+| funcB |        | funcY |        |        |
+| funcA |        | main  |        | main   |
+| main  |        |       |        |        |
+--------         --------         --------
+   ↑                ↑                ↑
+  sp1              sp2              sp3
+```
 
----
-
-| Stack | <-- sp1 | Stack | <-- sp2 | Stack | <-- sp3
-
----
-
-| funcC | | funcX | | |
-| funcB | | funcY | | |
-| funcA | | main | | main |
-
----
 
 **sp (stack pointer):** Stack এর উপরের অংশকে নির্দেশ করে।
 
